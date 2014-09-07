@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNumbers.git",
-                "reference": "39d4f5e32843ddc220420f4fdc7ab38c827ed5d3"
+                "reference": "a3c14eccfde77067475a74adf0853e220f52854c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/39d4f5e32843ddc220420f4fdc7ab38c827ed5d3",
-                "reference": "39d4f5e32843ddc220420f4fdc7ab38c827ed5d3",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/a3c14eccfde77067475a74adf0853e220f52854c",
+                "reference": "a3c14eccfde77067475a74adf0853e220f52854c",
                 "shasum": ""
             },
             "require-dev": {
@@ -43,7 +43,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-07 16:34:44"
+            "time": "2014-09-07 18:32:01"
         },
         {
             "name": "pimple/pimple",

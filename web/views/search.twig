@@ -2,9 +2,10 @@
 <html>
 <head><title>{{ title }}</title></head>
 <body>
-<h1>Search {{ name }}</h1>
-<form method="post" action="search">
-<input type="text" name="searchString" placeholder="Search..." /><input type="submit" value="Go!" />
+<h1>Search</h1>
+<form method="get" action="search">
+<input type="text" name="searchString" value="{{ name }}" placeholder="Search..." /><input type="submit" value="Go!" />
 </form>
+<p>Result: {{ result }}</p>
 </body>
 </html>

@@ -4,8 +4,47 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec971f8f862f30ee8a8f454850da8793",
+    "hash": "bf2f6e02a990051c57cee765d9df7174",
     "packages": [
+        {
+            "name": "lt-words/lt-numbers",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidsanchezcrespillo/LtNumbers.git",
+                "reference": "39d4f5e32843ddc220420f4fdc7ab38c827ed5d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/39d4f5e32843ddc220420f4fdc7ab38c827ed5d3",
+                "reference": "39d4f5e32843ddc220420f4fdc7ab38c827ed5d3",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LtWords\\LtNumbers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sanchez Crespillo",
+                    "email": "davidsanchezcrespillo@gmail.com"
+                }
+            ],
+            "description": "Number to text converter for the Lithuanian language",
+            "keywords": [
+                "Lithuanian"
+            ],
+            "time": "2014-09-07 16:34:44"
+        },
         {
             "name": "pimple/pimple",
             "version": "v1.1.1",
@@ -545,9 +584,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "lt-words/lt-numbers": 20
+    },
     "prefer-stable": false,
     "platform": [
 

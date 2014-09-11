@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<project name="LtNouns" default="build" basedir="." description="Buildfile for LtWords">
+	<target name="test">
+		<phpunit haltonerror="true" haltonfailure="true">
+			<batchtest>
+				<fileset dir="tests">
+					<include name="*Test.php"/>
+				</fileset>
+			</batchtest>
+		</phpunit>
+	</target>
+	
+	<target name="phpcs">
+		<phpcodesniffer
+			standard="PSR2"
+			allowedFileExtensions="php">
+			<fileset dir="web" id="filestosniff">
+              <include name="*.php"/>
+            </fileset>
+			<formatter type="summary" usefile="false"  />
+			<formatter type="full" outfile="report.txt" />
+		</phpcodesniffer>
+	</target>
+	
+	<target name="build" depends="phpcs">
+	</target>
+</project>

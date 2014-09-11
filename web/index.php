@@ -13,15 +13,15 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->get('/search/{name}', function ($name) use ($app) {
-	$parameter = $name;
-	if ($parameter == '') {
-		$parameter = $app['request']->get('searchString');
-	}
-	$nameStr = $parameter;
-	if (is_numeric($nameStr)) {
-		$ltNumbers = new LtWords\LtNumbers\LtNumbers;
-		$nameStr = $ltNumbers->numberToText($parameter);
-	}
+    $parameter = $name;
+    if ($parameter == '') {
+        $parameter = $app['request']->get('searchString');
+    }
+    $nameStr = $parameter;
+    if (is_numeric($nameStr)) {
+        $ltNumbers = new LtWords\LtNumbers\LtNumbers;
+        $nameStr = $ltNumbers->numberToText($parameter);
+    }
 
     return $app['twig']->render('search.twig', array(
         'title' => 'Search',
@@ -31,7 +31,7 @@ $app->get('/search/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
-$app->get('/', function() use($app) {
+$app->get('/', function () use ($app) {
     return $app['twig']->render('index.twig', array(
         'title' => $app['appName']
     ));

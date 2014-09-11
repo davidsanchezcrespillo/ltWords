@@ -3,6 +3,11 @@
         "silex/silex": "~1.2",
         "twig/twig": ">=1.8,<2.0-dev",
         "lt-words/lt-numbers": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*",
+        "squizlabs/php_codesniffer": "1.*",
+        "phing/phing": "2.*"
     }
 }
 

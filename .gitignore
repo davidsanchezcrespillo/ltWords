@@ -3,3 +3,5 @@ vendor/*
 
 composer.phar
 .htaccess
+report.txt
+

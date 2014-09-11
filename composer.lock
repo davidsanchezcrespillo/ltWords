@@ -4,8 +4,49 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30f3c410bb38ee32eb802e671258e037",
+    "hash": "a59c6a1ca0852387ba5dbb1870a3adb9",
     "packages": [
+        {
+            "name": "lt-words/lt-nouns",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
+                "reference": "b25193f376ffcd259c3dab2f034141d872178db0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/b25193f376ffcd259c3dab2f034141d872178db0",
+                "reference": "b25193f376ffcd259c3dab2f034141d872178db0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phing/phing": "2.*",
+                "phpunit/phpunit": "4.0.*",
+                "squizlabs/php_codesniffer": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LtWords\\LtNouns\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sanchez Crespillo",
+                    "email": "davidsanchezcrespillo@gmail.com"
+                }
+            ],
+            "description": "Generator of noun declensionss for the Lithuanian language",
+            "keywords": [
+                "Lithuanian"
+            ],
+            "time": "2014-09-11 08:57:47"
+        },
         {
             "name": "lt-words/lt-numbers",
             "version": "dev-master",
@@ -1359,7 +1400,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "lt-words/lt-numbers": 20
+        "lt-words/lt-numbers": 20,
+        "lt-words/lt-nouns": 20
     },
     "prefer-stable": false,
     "platform": [

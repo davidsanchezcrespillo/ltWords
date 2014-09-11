@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "b25193f376ffcd259c3dab2f034141d872178db0"
+                "reference": "cb8866daa696ad4bcecacc3af2096798e877bb20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/b25193f376ffcd259c3dab2f034141d872178db0",
-                "reference": "b25193f376ffcd259c3dab2f034141d872178db0",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/cb8866daa696ad4bcecacc3af2096798e877bb20",
+                "reference": "cb8866daa696ad4bcecacc3af2096798e877bb20",
                 "shasum": ""
             },
             "require-dev": {
@@ -41,11 +41,11 @@
                     "email": "davidsanchezcrespillo@gmail.com"
                 }
             ],
-            "description": "Generator of noun declensionss for the Lithuanian language",
+            "description": "Generator of noun declensions for the Lithuanian language",
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-11 08:57:47"
+            "time": "2014-09-11 11:41:54"
         },
         {
             "name": "lt-words/lt-numbers",

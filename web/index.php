@@ -12,7 +12,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
-$app->get('/search/{name}', function ($name) use ($app) {
+$app->get('/numbers/{name}', function ($name) use ($app) {
     $parameter = $name;
     if ($parameter == '') {
         $parameter = $app['request']->get('searchString');
@@ -23,10 +23,26 @@ $app->get('/search/{name}', function ($name) use ($app) {
         $nameStr = $ltNumbers->numberToText($parameter);
     }
 
-    return $app['twig']->render('search.twig', array(
-        'title' => 'Search',
+    return $app['twig']->render('numbers.twig', array(
+        'title' => 'LTNumbers',
         'name' => $parameter,
         'result' => $nameStr
+    ));
+})
+->value('name', '');
+
+$app->get('/nouns/{name}', function ($name) use ($app) {
+    $parameter = $name;
+    if ($parameter == '') {
+        $parameter = $app['request']->get('searchString');
+    }
+    $ltNouns = new LtWords\LtNouns\LtNouns;
+    $nounDeclensions = $ltNouns->generateDeclensions($parameter);
+
+    return $app['twig']->render('nouns.twig', array(
+        'title' => 'LTNumbers',
+        'name' => $parameter,
+        'result' => $nounDeclensions
     ));
 })
 ->value('name', '');

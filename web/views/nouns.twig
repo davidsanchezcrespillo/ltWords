@@ -2,7 +2,7 @@
 <html>
 <head><title>{{ title }}</title></head>
 <body>
-<h1>LTNouns</h1>
+<h1>{{ title }}</h1>
 <form method="get" action="#">
 <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="Go!" />
 </form>
@@ -11,25 +11,25 @@
 {% else %}
 <h2>Singular</h2>
 <table>
-	<tr><th>Case</th><th>Form</th></tr>
-	<tr><td>Kas?</td><td>{{ result.singular.kas }}</td></tr>
-	<tr><td>Ko?</td><td>{{ result.singular.ko }}</td></tr>
-	<tr><td>Ką?</td><td>{{ result.singular.ką }}</td></tr>
-	<tr><td>Kam?</td><td>{{ result.singular.kam }}</td></tr>
-	<tr><td>Kame?</td><td>{{ result.singular.kame }}</td></tr>
-	<tr><td>Kuo?</td><td>{{ result.singular.kuo }}</td></tr>
-	<tr><td>O?</td><td>{{ result.singular.o }}</td></tr>
+    <tr><th>Case</th><th>Form</th></tr>
+    <tr><td>Kas?</td><td>{{ result.singular.kas }}</td></tr>
+    <tr><td>Ko?</td><td>{{ result.singular.ko }}</td></tr>
+    <tr><td>Ką?</td><td>{{ result.singular.ką }}</td></tr>
+    <tr><td>Kam?</td><td>{{ result.singular.kam }}</td></tr>
+    <tr><td>Kame?</td><td>{{ result.singular.kame }}</td></tr>
+    <tr><td>Kuo?</td><td>{{ result.singular.kuo }}</td></tr>
+    <tr><td>O?</td><td>{{ result.singular.o }}</td></tr>
 </table>
 <h2>Plural</h2>
 <table>
-	<tr><th>Case</th><th>Form</th></tr>
-	<tr><td>Kas?</td><td>{{ result.plural.kas }}</td></tr>
-	<tr><td>Ko?</td><td>{{ result.plural.ko }}</td></tr>
-	<tr><td>Ką?</td><td>{{ result.plural.ką }}</td></tr>
-	<tr><td>Kam?</td><td>{{ result.plural.kam }}</td></tr>
-	<tr><td>Kame?</td><td>{{ result.plural.kame }}</td></tr>
-	<tr><td>Kuo?</td><td>{{ result.plural.kuo }}</td></tr>
-	<tr><td>O?</td><td>{{ result.plural.o }}</td></tr>
+    <tr><th>Case</th><th>Form</th></tr>
+    <tr><td>Kas?</td><td>{{ result.plural.kas }}</td></tr>
+    <tr><td>Ko?</td><td>{{ result.plural.ko }}</td></tr>
+    <tr><td>Ką?</td><td>{{ result.plural.ką }}</td></tr>
+    <tr><td>Kam?</td><td>{{ result.plural.kam }}</td></tr>
+    <tr><td>Kame?</td><td>{{ result.plural.kame }}</td></tr>
+    <tr><td>Kuo?</td><td>{{ result.plural.kuo }}</td></tr>
+    <tr><td>O?</td><td>{{ result.plural.o }}</td></tr>
 </table>
 {% endif %}
 </body>

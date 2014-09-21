@@ -36,11 +36,12 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
     if ($parameter == '') {
         $parameter = $app['request']->get('searchString');
     }
-    $ltNouns = new LtWords\LtNouns\LtNouns;
+    $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;
+    $ltNouns = new LtWords\LtNouns\LtNouns($ltWordTypes);
     $nounDeclensions = $ltNouns->generateDeclensions($parameter);
 
     return $app['twig']->render('nouns.twig', array(
-        'title' => 'LTNumbers',
+        'title' => 'LTNouns',
         'name' => $parameter,
         'result' => $nounDeclensions
     ));

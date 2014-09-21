@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a59c6a1ca0852387ba5dbb1870a3adb9",
+    "hash": "d434b34837a86ada7bbb1f807280d851",
     "packages": [
         {
             "name": "lt-words/lt-nouns",
@@ -12,13 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "e696483ee0f83a8b459165ebbb91465030a83922"
+                "reference": "be9c1b56499fc5f47a0057b82c878f3c0aa9039b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/e696483ee0f83a8b459165ebbb91465030a83922",
-                "reference": "e696483ee0f83a8b459165ebbb91465030a83922",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/be9c1b56499fc5f47a0057b82c878f3c0aa9039b",
+                "reference": "be9c1b56499fc5f47a0057b82c878f3c0aa9039b",
                 "shasum": ""
+            },
+            "require": {
+                "lt-words/lt-wordtypes": "dev-master"
             },
             "require-dev": {
                 "phing/phing": "2.*",
@@ -45,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-11 12:07:19"
+            "time": "2014-09-21 20:45:17"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -53,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNumbers.git",
-                "reference": "1640dce4a55ee62e9c6a191a4a06fa2e4bb46539"
+                "reference": "dbe7a85ce91dc1a00040e02493914e3da48e23de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/1640dce4a55ee62e9c6a191a4a06fa2e4bb46539",
-                "reference": "1640dce4a55ee62e9c6a191a4a06fa2e4bb46539",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/dbe7a85ce91dc1a00040e02493914e3da48e23de",
+                "reference": "dbe7a85ce91dc1a00040e02493914e3da48e23de",
                 "shasum": ""
             },
             "require-dev": {
@@ -86,7 +89,48 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-11 12:08:27"
+            "time": "2014-09-11 13:10:51"
+        },
+        {
+            "name": "lt-words/lt-wordtypes",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidsanchezcrespillo/LtWordTypes.git",
+                "reference": "8df4371f3254a0c1e3c6917746914aa3c675101b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/8df4371f3254a0c1e3c6917746914aa3c675101b",
+                "reference": "8df4371f3254a0c1e3c6917746914aa3c675101b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phing/phing": "2.*",
+                "phpunit/phpunit": "4.0.*",
+                "squizlabs/php_codesniffer": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LtWords\\LtWordTypes\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sanchez Crespillo",
+                    "email": "davidsanchezcrespillo@gmail.com"
+                }
+            ],
+            "description": "Identification of word types for the Lithuanian language",
+            "keywords": [
+                "Lithuanian"
+            ],
+            "time": "2014-09-21 20:42:07"
         },
         {
             "name": "pimple/pimple",
@@ -1401,7 +1445,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "lt-words/lt-numbers": 20,
-        "lt-words/lt-nouns": 20
+        "lt-words/lt-nouns": 20,
+        "lt-words/lt-wordtypes": 20
     },
     "prefer-stable": false,
     "platform": [

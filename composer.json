@@ -3,7 +3,8 @@
         "silex/silex": "~1.2",
         "twig/twig": ">=1.8,<2.0-dev",
         "lt-words/lt-numbers": "dev-master",
-        "lt-words/lt-nouns": "dev-master"
+        "lt-words/lt-nouns": "dev-master",
+        "lt-words/lt-wordtypes": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "4.0.*",

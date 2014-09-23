@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "4e2d7cc516781f612584fda67c53de37e92d542e"
+                "reference": "c9e85bf251506381bb8f4347a6f9ab48ce170742"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/4e2d7cc516781f612584fda67c53de37e92d542e",
-                "reference": "4e2d7cc516781f612584fda67c53de37e92d542e",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/c9e85bf251506381bb8f4347a6f9ab48ce170742",
+                "reference": "c9e85bf251506381bb8f4347a6f9ab48ce170742",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-23 05:10:54"
+            "time": "2014-09-23 16:08:05"
         },
         {
             "name": "lt-words/lt-numbers",

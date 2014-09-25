@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "fc6dd2d2a5c1f7eb800ab2a7e8356216d936b6d5"
+                "reference": "5b7fcf49333cc7b6347687269d4b4714f924fc7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/fc6dd2d2a5c1f7eb800ab2a7e8356216d936b6d5",
-                "reference": "fc6dd2d2a5c1f7eb800ab2a7e8356216d936b6d5",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/5b7fcf49333cc7b6347687269d4b4714f924fc7a",
+                "reference": "5b7fcf49333cc7b6347687269d4b4714f924fc7a",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-24 18:35:37"
+            "time": "2014-09-25 12:40:56"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtWordTypes.git",
-                "reference": "e2c7462ab3e2572b9651f1dc58b45d0e39566b11"
+                "reference": "de7cc55b69d84daffcb521f1ef706095bf4a5c73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/e2c7462ab3e2572b9651f1dc58b45d0e39566b11",
-                "reference": "e2c7462ab3e2572b9651f1dc58b45d0e39566b11",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/de7cc55b69d84daffcb521f1ef706095bf4a5c73",
+                "reference": "de7cc55b69d84daffcb521f1ef706095bf4a5c73",
                 "shasum": ""
             },
             "require-dev": {
@@ -130,7 +130,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-24 17:42:24"
+            "time": "2014-09-25 11:40:13"
         },
         {
             "name": "pimple/pimple",

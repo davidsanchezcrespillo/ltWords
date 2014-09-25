@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><title>{{ title }}</title></head>
+<head>
+    <title>{{ title }}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
 <body>
-<h1>LTNumbers</h1>
-<form method="get" action="#">
-<input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="Go!" />
-</form>
-<p>Result: {{ result }}</p>
+    <div class="container">
+        <div class="page-header"><h1>LTNumbers</h1></div>
+        <form method="get" action="#">
+            <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="Go!" />
+        </form>
+{% if result != "" %}
+        <div class="alert alert-success">
+        <p><b>{{ result }}</b></p>
+        </div>
+{% endif %}
+    </div>
 </body>
 </html>

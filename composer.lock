@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "1c10d1d72ec073102aab30b5bd286ed48bb90baa"
+                "reference": "7df73a4161fa424c0226d80c0e3e4ce52283e66d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/1c10d1d72ec073102aab30b5bd286ed48bb90baa",
-                "reference": "1c10d1d72ec073102aab30b5bd286ed48bb90baa",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/7df73a4161fa424c0226d80c0e3e4ce52283e66d",
+                "reference": "7df73a4161fa424c0226d80c0e3e4ce52283e66d",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-02 20:14:09"
+            "time": "2014-10-03 19:53:04"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -56,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNumbers.git",
-                "reference": "dbe7a85ce91dc1a00040e02493914e3da48e23de"
+                "reference": "115b6e36dea1c8aa71492417fc77125b368db89a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/dbe7a85ce91dc1a00040e02493914e3da48e23de",
-                "reference": "dbe7a85ce91dc1a00040e02493914e3da48e23de",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/115b6e36dea1c8aa71492417fc77125b368db89a",
+                "reference": "115b6e36dea1c8aa71492417fc77125b368db89a",
                 "shasum": ""
             },
             "require-dev": {
@@ -89,7 +89,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-11 13:10:51"
+            "time": "2014-10-03 19:14:56"
         },
         {
             "name": "lt-words/lt-wordtypes",
@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtWordTypes.git",
-                "reference": "de7cc55b69d84daffcb521f1ef706095bf4a5c73"
+                "reference": "c0a6a3cf825a2308e951c06e09a2d6bdbd69b451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/de7cc55b69d84daffcb521f1ef706095bf4a5c73",
-                "reference": "de7cc55b69d84daffcb521f1ef706095bf4a5c73",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/c0a6a3cf825a2308e951c06e09a2d6bdbd69b451",
+                "reference": "c0a6a3cf825a2308e951c06e09a2d6bdbd69b451",
                 "shasum": ""
             },
             "require-dev": {
@@ -130,7 +130,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-09-25 11:40:13"
+            "time": "2014-10-03 19:34:48"
         },
         {
             "name": "pimple/pimple",

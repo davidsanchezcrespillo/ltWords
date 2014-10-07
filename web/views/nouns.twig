@@ -17,7 +17,14 @@
             <form method="get" action="#">
                 <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="Go!" />
             </form>
-{% if result == "" %}
+{% if result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_NOT_FOUND') %}
+<hr/>
+<div class="alert alert-warning"><p>Noun not found in the internal dictionary. <a href="http://www.lietuviu-anglu.com/"><b>Try somewhere else</b></a></p></div>
+{% elseif result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_DIFFERENT') %}
+<hr/>
+<div class="alert alert-warning"><p>You probably meant <a href="http://www.lietuviu-anglu.com/?word={{ result.word }}"><b>{{ result.word }}</b></a></p></div>
+{% endif %}
+{% if result.declensions == "" %}
         <p></p>
 {% else %}
         <div class="row">
@@ -28,13 +35,13 @@
             <tr class="info"><th>Case</th><th>Form</th></tr>
             </thead>
             <tbody>
-            <tr class="success"><td>Kas?</td><td><b>{{ result.singular.kas }}</b></td></tr>
-            <tr class="success"><td>Ko?</td><td><b>{{ result.singular.ko }}</b></td></tr>
-            <tr class="success"><td>Ką?</td><td><b>{{ result.singular.ką }}</b></td></tr>
-            <tr class="success"><td>Kam?</td><td><b>{{ result.singular.kam }}</b></td></tr>
-            <tr class="success"><td>Kame?</td><td><b>{{ result.singular.kame }}</b></td></tr>
-            <tr class="success"><td>Kuo?</td><td><b>{{ result.singular.kuo }}</b></td></tr>
-            <tr class="success"><td>O!</td><td><b>{{ result.singular.o }}</b></td></tr>
+            <tr class="success"><td>Kas?</td><td><b>{{ result.declensions.singular.kas }}</b></td></tr>
+            <tr class="success"><td>Ko?</td><td><b>{{ result.declensions.singular.ko }}</b></td></tr>
+            <tr class="success"><td>Ką?</td><td><b>{{ result.declensions.singular.ką }}</b></td></tr>
+            <tr class="success"><td>Kam?</td><td><b>{{ result.declensions.singular.kam }}</b></td></tr>
+            <tr class="success"><td>Kame?</td><td><b>{{ result.declensions.singular.kame }}</b></td></tr>
+            <tr class="success"><td>Kuo?</td><td><b>{{ result.declensions.singular.kuo }}</b></td></tr>
+            <tr class="success"><td>O!</td><td><b>{{ result.declensions.singular.o }}</b></td></tr>
             </tbody>
         </table>
         </div>
@@ -45,13 +52,13 @@
             <tr class="info"><th>Case</th><th>Form</th></tr>
             </thead>
             <tbody>
-            <tr class="success"><td>Kas?</td><td><b>{{ result.plural.kas }}</b></td></tr>
-            <tr class="success"><td>Ko?</td><td><b>{{ result.plural.ko }}</b></td></tr>
-            <tr class="success"><td>Ką?</td><td><b>{{ result.plural.ką }}</b></td></tr>
-            <tr class="success"><td>Kam?</td><td><b>{{ result.plural.kam }}</b></td></tr>
-            <tr class="success"><td>Kame?</td><td><b>{{ result.plural.kame }}</b></td></tr>
-            <tr class="success"><td>Kuo?</td><td><b>{{ result.plural.kuo }}</b></td></tr>
-            <tr class="success"><td>O!</td><td><b>{{ result.plural.o }}</b></td></tr>
+            <tr class="success"><td>Kas?</td><td><b>{{ result.declensions.plural.kas }}</b></td></tr>
+            <tr class="success"><td>Ko?</td><td><b>{{ result.declensions.plural.ko }}</b></td></tr>
+            <tr class="success"><td>Ką?</td><td><b>{{ result.declensions.plural.ką }}</b></td></tr>
+            <tr class="success"><td>Kam?</td><td><b>{{ result.declensions.plural.kam }}</b></td></tr>
+            <tr class="success"><td>Kame?</td><td><b>{{ result.declensions.plural.kame }}</b></td></tr>
+            <tr class="success"><td>Kuo?</td><td><b>{{ result.declensions.plural.kuo }}</b></td></tr>
+            <tr class="success"><td>O!</td><td><b>{{ result.declensions.plural.o }}</b></td></tr>
             </tbody>
         </table>
         </div>

@@ -26,11 +26,11 @@ $app['images'] = $images;
 
 //$app['monolog']->addDebug("Languages: $languages");
 
-$app->get('/lang/{lang}', function($lang) use($app) {
+$app->get('/lang/{lang}', function ($lang) use ($app) {
     // check if language exists
     if (is_dir(__DIR__ . '/locale/' . $lang)) {
         // save user selection in session
-        $app['session']->set('current_language', $lang);    
+        $app['session']->set('current_language', $lang);
     }
     return $app->redirect($_SERVER['HTTP_REFERER']);
 });

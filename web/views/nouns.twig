@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ title }}</title>
+    <title>{{ title | trans }}</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -13,52 +16,54 @@
 </head>
 <body>
     <div class="container">
-        <div class="page-header"><h1>{{ title }}</h1></div>
-            <form method="get" action="#">
-                <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="Go!" />
-            </form>
-{% if result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_NOT_FOUND') %}
-<hr/>
-<div class="alert alert-warning"><p>Noun not found in the internal dictionary. <a href="http://www.lietuviu-anglu.com/"><b>Try somewhere else</b></a></p></div>
-{% elseif result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_DIFFERENT') %}
-<hr/>
-<div class="alert alert-warning"><p>You probably meant <a href="http://www.lietuviu-anglu.com/?word={{ result.word }}"><b>{{ result.word }}</b></a></p></div>
-{% endif %}
+        <div class="page-header"><h1>{{ title | trans }}</h1></div>
+        {% include 'langMenu.twig' with {'images': images} %}
+        <form method="get" action="#">
+            <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
+        </form>
 {% if result.declensions == "" %}
         <p></p>
 {% else %}
+{% if result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_NOT_FOUND') %}
+<hr/>
+<div class="alert alert-warning"><p>{{ 'Noun not found in the internal dictionary' | trans }}. <a href="http://www.lietuviu-anglu.com/"><b>{{ 'Try somewhere else' | trans }}</b></a></p></div>
+{% elseif result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_DIFFERENT') %}
+<hr/>
+<div class="alert alert-warning"><p>{{ 'You probably meant' | trans }} <a href="http://www.lietuviu-anglu.com/?word={{ result.word }}"><b>{{ result.word }}</b></a></p></div>
+{% endif %}
+
         <div class="row">
         <div class="col-md-6">
-        <h2>Singular</h2>
+        <h2>{{ 'Singular' | trans }}</h2>
         <table class="table table-striped table-condensed table-bordered table-hover">
             <thead>
-            <tr class="info"><th>Case</th><th>Form</th></tr>
+            <tr class="info"><th>{{ 'Case' | trans }}</th><th>{{ 'Form' | trans }}</th></tr>
             </thead>
             <tbody>
-            <tr class="success"><td>Kas?</td><td><b>{{ result.declensions.singular.kas }}</b></td></tr>
-            <tr class="success"><td>Ko?</td><td><b>{{ result.declensions.singular.ko }}</b></td></tr>
-            <tr class="success"><td>Ką?</td><td><b>{{ result.declensions.singular.ką }}</b></td></tr>
-            <tr class="success"><td>Kam?</td><td><b>{{ result.declensions.singular.kam }}</b></td></tr>
-            <tr class="success"><td>Kame?</td><td><b>{{ result.declensions.singular.kame }}</b></td></tr>
-            <tr class="success"><td>Kuo?</td><td><b>{{ result.declensions.singular.kuo }}</b></td></tr>
-            <tr class="success"><td>O!</td><td><b>{{ result.declensions.singular.o }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kas?' | trans }}</td><td><b>{{ result.declensions.singular.kas }}</b></td></tr>
+            <tr class="success"><td>{{ 'Ko?' | trans }}</td><td><b>{{ result.declensions.singular.ko }}</b></td></tr>
+            <tr class="success"><td>{{ 'Ką?' | trans }}</td><td><b>{{ result.declensions.singular.ką }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kam?' | trans }}</td><td><b>{{ result.declensions.singular.kam }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kame?' | trans }}</td><td><b>{{ result.declensions.singular.kame }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kuo?' | trans }}</td><td><b>{{ result.declensions.singular.kuo }}</b></td></tr>
+            <tr class="success"><td>{{ 'O!' | trans }}</td><td><b>{{ result.declensions.singular.o }}</b></td></tr>
             </tbody>
         </table>
         </div>
         <div class="col-md-6">
-        <h2>Plural</h2>
+        <h2>{{ 'Plural' | trans }}</h2>
         <table class="table table-striped table-condensed table-bordered table-hover">
             <thead>
-            <tr class="info"><th>Case</th><th>Form</th></tr>
+            <tr class="info"><th>{{ 'Case' | trans }}</th><th>{{ 'Form' | trans }}</th></tr>
             </thead>
             <tbody>
-            <tr class="success"><td>Kas?</td><td><b>{{ result.declensions.plural.kas }}</b></td></tr>
-            <tr class="success"><td>Ko?</td><td><b>{{ result.declensions.plural.ko }}</b></td></tr>
-            <tr class="success"><td>Ką?</td><td><b>{{ result.declensions.plural.ką }}</b></td></tr>
-            <tr class="success"><td>Kam?</td><td><b>{{ result.declensions.plural.kam }}</b></td></tr>
-            <tr class="success"><td>Kame?</td><td><b>{{ result.declensions.plural.kame }}</b></td></tr>
-            <tr class="success"><td>Kuo?</td><td><b>{{ result.declensions.plural.kuo }}</b></td></tr>
-            <tr class="success"><td>O!</td><td><b>{{ result.declensions.plural.o }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kas?' | trans }}</td><td><b>{{ result.declensions.plural.kas }}</b></td></tr>
+            <tr class="success"><td>{{ 'Ko?' | trans }}</td><td><b>{{ result.declensions.plural.ko }}</b></td></tr>
+            <tr class="success"><td>{{ 'Ką?' | trans }}</td><td><b>{{ result.declensions.plural.ką }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kam?' | trans }}</td><td><b>{{ result.declensions.plural.kam }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kame?' | trans }}</td><td><b>{{ result.declensions.plural.kame }}</b></td></tr>
+            <tr class="success"><td>{{ 'Kuo?' | trans }}</td><td><b>{{ result.declensions.plural.kuo }}</b></td></tr>
+            <tr class="success"><td>{{ 'O!' | trans }}</td><td><b>{{ result.declensions.plural.o }}</b></td></tr>
             </tbody>
         </table>
         </div>

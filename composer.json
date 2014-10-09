@@ -2,6 +2,11 @@
     "require": {
         "silex/silex": "~1.2",
         "twig/twig": ">=1.8,<2.0-dev",
+        "symfony/twig-bridge": "~2.1",
+        "symfony/config": "~2.1",
+        "symfony/yaml": "~2.1",
+        "monolog/monolog": ">=1.0.0",
+        "symfony/translation": "~2.1",        
         "lt-words/lt-numbers": "dev-master",
         "lt-words/lt-nouns": "dev-master",
         "lt-words/lt-wordtypes": "dev-master"

@@ -4,7 +4,6 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-$app['appName'] = 'ltWords';
 $app['debug'] = true;
 
 // Register the Twig service provider

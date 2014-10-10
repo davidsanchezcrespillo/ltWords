@@ -81,9 +81,10 @@ $app->get('/img/{name}', function ($name) use ($app) {
     return $app->sendFile($fullName);
 });
 
-$app->get('/', function () use ($app) {
+$app->get('/index', function () use ($app) {
     return $app['twig']->render('index.twig', array(
-        'title' => $app['appName'],
+        'title' => 'index',
+        'conf' => $app['conf']
     ));
 });
 

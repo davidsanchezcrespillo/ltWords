@@ -13,10 +13,9 @@
 
 </head>
 <body>
-<h1>{{ title }}</h1>
-<ul>
-    <li><a href="numbers">Numbers</a></li>
-    <li><a href="nouns">Nouns</a></li>
-</ul>
+    <div class="container">
+    {% include 'navbar.twig' with {'name': 'index'} %}
+    {% include 'langMenu.twig' with {'images': conf.images} %}
+    </div>
 </body>
 </html>

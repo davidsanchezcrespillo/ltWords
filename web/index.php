@@ -19,10 +19,10 @@ foreach (glob(__DIR__ . '/locale/'. $lang . '/*.yml') as $locale) {
 // Set the current language
 $app['translator']->setLocale($lang);
 
-// Get the list of current languages from the config file
 $yamlParser = new Parser();
-$images = $yamlParser->parse(file_get_contents(__DIR__ . '/images.yml'));
-$app['images'] = $images;
+// Get the list of current languages from the config file
+$conf = $yamlParser->parse(file_get_contents(__DIR__ . '/config.yml'));
+$app['conf'] = $conf;
 
 //$app['monolog']->addDebug("Languages: $languages");
 
@@ -50,7 +50,7 @@ $app->get('/numbers/{name}', function ($name) use ($app) {
         'title' => 'LTNumbers',
         'name' => $parameter,
         'result' => $nameStr,
-        'images' => $app['images'],
+        'conf' => $app['conf'],
     ));
 })
 ->value('name', '');
@@ -68,7 +68,7 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
         'title' => 'LTNouns',
         'name' => $parameter,
         'result' => $nounDeclensions,
-        'images' => $app['images'],
+        'conf' => $app['conf'],
     ));
 })
 ->value('name', '');

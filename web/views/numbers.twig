@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
-        {% include 'langMenu.twig' with {'images': images} %}
+        {% include 'langMenu.twig' with {'images': conf.images} %}
         <form method="get" action="#">
             <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
         </form>

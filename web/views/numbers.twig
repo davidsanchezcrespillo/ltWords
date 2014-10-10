@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        {% include 'navbar.twig' with {'name': 'numbers'} %}
+        {% include 'navbar.twig' with {'name': title} %}
         {% include 'langMenu.twig' with {'images': conf.images} %}
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
         <form method="get" action="#">
@@ -27,6 +27,7 @@
         <p><b>{{ result }}</b></p>
         </div>
 {% endif %}
+    {% include 'footer.twig' with {'conf': conf} %}
     </div>
 </body>
 </html>

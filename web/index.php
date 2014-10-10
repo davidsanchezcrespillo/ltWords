@@ -73,17 +73,23 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
-$app->get('/img/{name}', function ($name) use ($app) {
-    $fullName = __DIR__ . '/img/' . $name;
-    
-    $app['monolog']->addDebug("Image name: $fullName");
+$app->get('/contact', function () use ($app) {
+    return $app['twig']->render('index.twig', array(
+        'title' => 'Contact',
+        'conf' => $app['conf']
+    ));
+});
 
-    return $app->sendFile($fullName);
+$app->get('/about', function () use ($app) {
+    return $app['twig']->render('index.twig', array(
+        'title' => 'About',
+        'conf' => $app['conf']
+    ));
 });
 
 $app->get('/index', function () use ($app) {
     return $app['twig']->render('index.twig', array(
-        'title' => 'index',
+        'title' => 'LTWords',
         'conf' => $app['conf']
     ));
 });

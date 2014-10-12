@@ -23,7 +23,7 @@
             <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
         </form>
 {% if result.declensions == "" %}
-        <p></p>
+    <p></p>
 {% else %}
 {% if result.status is constant('LtWords\\LtNouns\\LtNouns::NOUN_NOT_FOUND') %}
 <hr/>

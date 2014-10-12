@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "5bc87a69ecd528fd40fd518d787fe11bb954b946"
+                "reference": "8db3b21c87f42ad51ea8083f21a1e1e597fb6d10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/5bc87a69ecd528fd40fd518d787fe11bb954b946",
-                "reference": "5bc87a69ecd528fd40fd518d787fe11bb954b946",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/8db3b21c87f42ad51ea8083f21a1e1e597fb6d10",
+                "reference": "8db3b21c87f42ad51ea8083f21a1e1e597fb6d10",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-06 20:06:34"
+            "time": "2014-10-12 17:04:38"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -1065,16 +1065,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.16.0",
+            "version": "v1.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "8ce37115802e257a984a82d38254884085060024"
+                "reference": "7c4c01dcf578523cfcddf383641a4f12790270ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8ce37115802e257a984a82d38254884085060024",
-                "reference": "8ce37115802e257a984a82d38254884085060024",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/7c4c01dcf578523cfcddf383641a4f12790270ec",
+                "reference": "7c4c01dcf578523cfcddf383641a4f12790270ec",
                 "shasum": ""
             },
             "require": {
@@ -1118,7 +1118,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-07-05 12:19:05"
+            "time": "2014-10-10 14:09:53"
         }
     ],
     "packages-dev": [

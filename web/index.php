@@ -73,24 +73,12 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
-$app->get('/contact', function () use ($app) {
-    return $app['twig']->render('index.twig', array(
-        'title' => 'Contact',
-        'conf' => $app['conf']
-    ));
-});
-
-$app->get('/about', function () use ($app) {
-    return $app['twig']->render('index.twig', array(
-        'title' => 'About',
-        'conf' => $app['conf']
-    ));
-});
-
 $app->get('/index', function () use ($app) {
     return $app['twig']->render('index.twig', array(
         'title' => 'LTWords',
-        'conf' => $app['conf']
+        'conf' => $app['conf'],
+        'introduction' => 'Introduction',
+        'contact' => 'Contact'
     ));
 });
 

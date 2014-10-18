@@ -19,7 +19,7 @@
         {% include 'navbar.twig' with {'name': title} %}
         {% include 'langMenu.twig' with {'images': conf.images} %}
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
-        <form method="get" action="{{ app.request.baseUrl }}">
+        <form method="get" action="{{ app.request.baseUrl }}/nouns">
             <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
         </form>
 {% if result.declensions == "" %}

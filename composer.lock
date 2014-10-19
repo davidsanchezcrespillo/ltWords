@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "597d91c1f9149ac0f688a2d73287cc25d90da80b"
+                "reference": "71516293dec1fdfbb80c8eaea32be4354cb7ce25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/597d91c1f9149ac0f688a2d73287cc25d90da80b",
-                "reference": "597d91c1f9149ac0f688a2d73287cc25d90da80b",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/71516293dec1fdfbb80c8eaea32be4354cb7ce25",
+                "reference": "71516293dec1fdfbb80c8eaea32be4354cb7ce25",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-15 18:14:36"
+            "time": "2014-10-19 13:02:59"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -56,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNumbers.git",
-                "reference": "3d72a63b29cc44b69fde5081f3454c93d42d49ac"
+                "reference": "b094d05b83bd450b7ae429e4619cae2f43a4bd30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/3d72a63b29cc44b69fde5081f3454c93d42d49ac",
-                "reference": "3d72a63b29cc44b69fde5081f3454c93d42d49ac",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNumbers/zipball/b094d05b83bd450b7ae429e4619cae2f43a4bd30",
+                "reference": "b094d05b83bd450b7ae429e4619cae2f43a4bd30",
                 "shasum": ""
             },
             "require-dev": {
@@ -89,7 +89,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-15 18:16:02"
+            "time": "2014-10-19 13:02:13"
         },
         {
             "name": "lt-words/lt-wordtypes",
@@ -1848,9 +1848,7 @@
             "time": "2014-09-25 03:33:46"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "lt-words/lt-numbers": 20,
@@ -1858,10 +1856,6 @@
         "lt-words/lt-wordtypes": 20
     },
     "prefer-stable": false,
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "platform": [],
+    "platform-dev": []
 }

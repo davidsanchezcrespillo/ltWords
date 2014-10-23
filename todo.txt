@@ -2,7 +2,7 @@
 
 - Review correctness of the Nouns module.
 - Give better feedback in case of different errors.
-- Autocomplete for the text field.
+- Autocomplete for the text field. DONE
 - Guess game with numbers and nouns.
 
 - LATER: Adjectives (new module needs to be built)

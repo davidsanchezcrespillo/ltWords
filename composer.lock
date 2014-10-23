@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "c8714ac99c12b60c316c8003a7048663296b446b"
+                "reference": "6da5d94c8e61056b386fc543461f2aa02ab71f7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/c8714ac99c12b60c316c8003a7048663296b446b",
-                "reference": "c8714ac99c12b60c316c8003a7048663296b446b",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/6da5d94c8e61056b386fc543461f2aa02ab71f7e",
+                "reference": "6da5d94c8e61056b386fc543461f2aa02ab71f7e",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-23 07:40:49"
+            "time": "2014-10-23 09:36:39"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtWordTypes.git",
-                "reference": "04ba671bff815bcead9e9a06e065b3b5f8b46929"
+                "reference": "3dab1d6c1c4b9158e286fe551b9a95c5932f14fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/04ba671bff815bcead9e9a06e065b3b5f8b46929",
-                "reference": "04ba671bff815bcead9e9a06e065b3b5f8b46929",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/3dab1d6c1c4b9158e286fe551b9a95c5932f14fe",
+                "reference": "3dab1d6c1c4b9158e286fe551b9a95c5932f14fe",
                 "shasum": ""
             },
             "require-dev": {
@@ -130,7 +130,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-23 07:32:01"
+            "time": "2014-10-23 09:25:38"
         },
         {
             "name": "monolog/monolog",
@@ -1848,9 +1848,7 @@
             "time": "2014-09-25 03:33:46"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "lt-words/lt-numbers": 20,
@@ -1858,10 +1856,6 @@
         "lt-words/lt-wordtypes": 20
     },
     "prefer-stable": false,
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "platform": [],
+    "platform-dev": []
 }

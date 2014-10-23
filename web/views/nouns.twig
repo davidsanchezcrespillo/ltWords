@@ -5,6 +5,10 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/cupertino/jquery-ui.css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -13,6 +17,16 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <!-- Preventing too long lists of autocomplete results -->
+    <style>
+    .ui-autocomplete {
+        max-height: 200px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,7 +34,7 @@
         {% include 'langMenu.twig' with {'images': conf.images} %}
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
         <form method="get" action="{{ app.request.baseUrl }}/nouns">
-            <input type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
+            <input id="query" type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
         </form>
 {% if result.declensions == "" %}
     <p></p>
@@ -72,5 +86,19 @@
 {% endif %}
     {% include 'footer.twig' with {'conf': conf} %}
     </div>
+
+    <script type="text/javascript">
+        $("#query").autocomplete({
+            source: "{{ app.request.baseUrl }}/suggestnouns",
+            minLength: 3,
+            source: function(request, response) {
+                    $.getJSON("{{ app.request.baseUrl }}/suggestnouns", {
+                        query: request.term,
+                    }, function(data) {
+                        response(data);
+                    });
+                },            
+        });
+    </script>
 </body>
 </html>

@@ -2,6 +2,11 @@
 
 use Symfony\Component\Yaml\Parser;
 
+$filename = __DIR__.preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);
+if (php_sapi_name() === 'cli-server' && is_file($filename)) {
+    return false;
+}
+
 $app = require __DIR__ . '/bootstrap.php';
 
 // Get the default language from the session
@@ -26,6 +31,7 @@ $app['conf'] = $conf;
 
 //$app['monolog']->addDebug("Languages: $languages");
 
+// Language change
 $app->get('/lang/{lang}', function ($lang) use ($app) {
     // check if language exists
     if (is_dir(__DIR__ . '/locale/' . $lang)) {
@@ -35,6 +41,7 @@ $app->get('/lang/{lang}', function ($lang) use ($app) {
     return $app->redirect($_SERVER['HTTP_REFERER']);
 });
 
+// LT Numbers page
 $app->get('/numbers/{name}', function ($name) use ($app) {
     $parameter = $name;
     if ($parameter == '') {
@@ -55,6 +62,7 @@ $app->get('/numbers/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
+// LT Nouns page
 $app->get('/nouns/{name}', function ($name) use ($app) {
     $parameter = $name;
     if ($parameter == '') {
@@ -73,6 +81,19 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
+// Noun suggestions (AJAX service)
+$app->get('/suggestnouns', function() use ($app) {
+    $prefix = $app['request']->get('query');
+
+    $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;
+    $ltNouns = new LtWords\LtNouns\LtNouns($ltWordTypes);
+    
+    $suggestions = $ltNouns->suggestNoun($prefix);
+    
+    return $app->json($suggestions);
+});
+
+// Index page
 $app->get('/index', function () use ($app) {
     return $app['twig']->render('index.twig', array(
         'title' => 'LTWords',

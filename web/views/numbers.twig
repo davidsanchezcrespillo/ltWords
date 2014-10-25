@@ -19,11 +19,15 @@
         {% include 'navbar.twig' with {'name': title} %}
         {% include 'langMenu.twig' with {'images': conf.images} %}
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
-        <form method="get" action="{{ app.request.baseUrl }}/numbers">
-            <input type="number" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
-        </form>
-{% if result != "" %}
+        <div class="row">
+            <div class="col-md-12">
+            <form method="get" action="{{ app.request.baseUrl }}/numbers">
+                <input type="number" min="0" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
+            </form>
+            </div>
+        </div>
         <hr/>
+{% if result != "" %}
         <div class="alert alert-success">
         <p><b>{{ result }}</b></p>
         </div>

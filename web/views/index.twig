@@ -20,7 +20,6 @@
     <div class="row">
         <div class="col-md-12">
         <p>{{ introduction | trans }}</p>
-        <p>{{ contact | trans }}: <a href="{{ conf.contactUrl }}" title="{{ contact | trans }}">{{ conf.contactUrl }}</a></p>
         </div>
     </div>
     {% include 'footer.twig' with {'conf': conf} %}

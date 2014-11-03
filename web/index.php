@@ -81,8 +81,22 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
+// Get the noun declensions in JSON format
+$app->get('/nouns.json/{name}', function ($name) use ($app) {
+    $parameter = $name;
+    if ($parameter == '') {
+        $parameter = $app['request']->get('searchString');
+    }
+    $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;
+    $ltNouns = new LtWords\LtNouns\LtNouns($ltWordTypes);
+    $nounDeclensions = $ltNouns->generateDeclensions($parameter);
+
+    return $app->json($nounDeclensions);
+})
+->value('name', '');
+
 // Noun suggestions (AJAX service)
-$app->get('/suggestnouns', function() use ($app) {
+$app->get('/suggestnouns', function () use ($app) {
     $prefix = $app['request']->get('query');
 
     $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;

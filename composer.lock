@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtWordTypes.git",
-                "reference": "f52979a8ed995765bb2cdcef0f3a4bf828e94dfc"
+                "reference": "e8595339abfa816202e27c920e322a9c451dbfab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/f52979a8ed995765bb2cdcef0f3a4bf828e94dfc",
-                "reference": "f52979a8ed995765bb2cdcef0f3a4bf828e94dfc",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtWordTypes/zipball/e8595339abfa816202e27c920e322a9c451dbfab",
+                "reference": "e8595339abfa816202e27c920e322a9c451dbfab",
                 "shasum": ""
             },
             "require-dev": {
@@ -130,7 +130,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-10-23 12:35:48"
+            "time": "2014-10-27 14:07:38"
         },
         {
             "name": "monolog/monolog",

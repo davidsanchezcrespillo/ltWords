@@ -27,7 +27,7 @@
             </div>
         </div>
         <hr/>
-        <div id="result" class="alert alert-success">
+        <div id="result" class="alert alert-success" style="display:none;">
         </div>
     {% include 'footer.twig' with {'conf': conf} %}
     </div>
@@ -48,7 +48,7 @@
            success: function(data)
            {
                //alert(data.result); // show response from the php script.
-               $('#result').empty().append('<p><b>' + data.result + '</b></p>');
+               $('#result').empty().append('<p><b>' + data.result + '</b></p>').show();
            }
       });
 

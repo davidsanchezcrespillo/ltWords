@@ -48,9 +48,16 @@ $app->get('/numbers/{name}', function ($name) use ($app) {
         $parameter = $app['request']->get('searchString');
     }
     $nameStr = $parameter;
+    
+    $format = $app['request']->get('format');
+    
     if (is_numeric($nameStr)) {
         $ltNumbers = new LtWords\LtNumbers\LtNumbers;
         $nameStr = $ltNumbers->numberToText($parameter);
+    }
+
+    if ($format == 'json') {
+        return $app->json(array('result' => $nameStr));
     }
 
     return $app['twig']->render('numbers.twig', array(
@@ -68,9 +75,16 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
     if ($parameter == '') {
         $parameter = $app['request']->get('searchString');
     }
+
+    $format = $app['request']->get('format');
+
     $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;
     $ltNouns = new LtWords\LtNouns\LtNouns($ltWordTypes);
     $nounDeclensions = $ltNouns->generateDeclensions($parameter);
+
+    if ($format == 'json') {
+        return $app->json($nounDeclensions);
+    }
 
     return $app['twig']->render('nouns.twig', array(
         'title' => 'LTNouns',
@@ -78,20 +92,6 @@ $app->get('/nouns/{name}', function ($name) use ($app) {
         'result' => $nounDeclensions,
         'conf' => $app['conf'],
     ));
-})
-->value('name', '');
-
-// Get the noun declensions in JSON format
-$app->get('/nouns.json/{name}', function ($name) use ($app) {
-    $parameter = $name;
-    if ($parameter == '') {
-        $parameter = $app['request']->get('searchString');
-    }
-    $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;
-    $ltNouns = new LtWords\LtNouns\LtNouns($ltWordTypes);
-    $nounDeclensions = $ltNouns->generateDeclensions($parameter);
-
-    return $app->json($nounDeclensions);
 })
 ->value('name', '');
 

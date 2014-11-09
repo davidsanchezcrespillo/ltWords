@@ -21,18 +21,41 @@
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
         <div class="row">
             <div class="col-md-12">
-            <form method="get" action="{{ app.request.baseUrl }}/numbers">
-                <input type="number" min="0" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
+            <form id="numberForm" method="get" action="{{ app.request.baseUrl }}/numbers">
+                <input type="number" min="0" id="searchString" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
             </form>
             </div>
         </div>
         <hr/>
-{% if result != "" %}
-        <div class="alert alert-success">
-        <p><b>{{ result }}</b></p>
+        <div id="result" class="alert alert-success">
         </div>
-{% endif %}
     {% include 'footer.twig' with {'conf': conf} %}
     </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#numberForm').submit(function() {
+
+      var url = "{{ app.request.baseUrl }}/numbers";
+    
+      //alert($('#searchString').val());
+      $.ajax({
+           type: "GET",
+           url: url,
+           data: {
+               "searchString": $('#searchString').val(),
+               "format": "json"
+           },
+           success: function(data)
+           {
+               //alert(data.result); // show response from the php script.
+               $('#result').empty().append('<p><b>' + data.result + '</b></p>');
+           }
+      });
+
+      return false; // avoid to execute the actual submit of the form.
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -2,21 +2,11 @@
 <html>
 <head>
     <title>{{ title | trans }}</title>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    {% include 'headIncludes.twig' %}
 
     <!-- jQuery UI -->
     <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/cupertino/jquery-ui.css">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
     <!-- Preventing too long lists of autocomplete results -->
     <style>
@@ -85,7 +75,7 @@
         </div>
 {% endif %}
     <div class="alert alert-warning" style="display:none;">
-		<p id="ajaxAlerts"></p>
+        <p id="ajaxAlerts"></p>
     </div>
     <div class="row" id="ajaxResultTable" style="display:none;">
         <div class="col-md-4">
@@ -162,22 +152,22 @@
            },
            success: function(data)
            {
-			   $('#ajaxAlerts').parent().hide();
-			   
-			   if (!data.declensions) {
-			       return;
-			   }
-			   if (data.status == {{ constant('LtWords\\LtNouns\\LtNouns::NOUN_NOT_FOUND') }}) {
-				   $('#ajaxAlerts').empty()
-				     .append("{{ 'Noun not found in the internal dictionary' | trans }}. <a href=\"http://www.lietuviu-anglu.com/\"><b>{{ 'Try somewhere else' | trans }}</b></a></p>")
-				     .parent().show();
-			   } else if (data.status == {{ constant('LtWords\\LtNouns\\LtNouns::NOUN_DIFFERENT') }}) {
-				   $('#ajaxAlerts').empty()
-				       .append(
-				           "<p>{{ 'You probably meant' | trans }} <a href=\"http://www.lietuviu-anglu.com/?word=" + data.word +"\"><b>" + data.word + "</b></a></p>"
-				       )
-				       .parent().show();
-			   }
+               $('#ajaxAlerts').parent().hide();
+               
+               if (!data.declensions) {
+                   return;
+               }
+               if (data.status == {{ constant('LtWords\\LtNouns\\LtNouns::NOUN_NOT_FOUND') }}) {
+                   $('#ajaxAlerts').empty()
+                     .append("{{ 'Noun not found in the internal dictionary' | trans }}. <a href=\"http://www.lietuviu-anglu.com/\"><b>{{ 'Try somewhere else' | trans }}</b></a></p>")
+                     .parent().show();
+               } else if (data.status == {{ constant('LtWords\\LtNouns\\LtNouns::NOUN_DIFFERENT') }}) {
+                   $('#ajaxAlerts').empty()
+                       .append(
+                           "<p>{{ 'You probably meant' | trans }} <a href=\"http://www.lietuviu-anglu.com/?word=" + data.word +"\"><b>" + data.word + "</b></a></p>"
+                       )
+                       .parent().show();
+               }
                $.each(data.declensions.singular, function(k, v) {
                    //alert(k + ' - ' + v);
                    $('#singular_' + k).empty();

@@ -5,8 +5,8 @@
     {% include 'headIncludes.twig' %}
 
     <!-- jQuery UI -->
-    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/cupertino/jquery-ui.css">
+    <script src="{{ app.request.baseUrl }}/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="{{ app.request.baseUrl }}/vendor/jquery-ui/themes/cupertino/jquery-ui.min.css">
     
     <!-- Preventing too long lists of autocomplete results -->
     <style>

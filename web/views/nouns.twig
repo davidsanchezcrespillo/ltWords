@@ -120,6 +120,7 @@
         $("#query").autocomplete({
             source: "{{ app.request.baseUrl }}/suggestnouns",
             minLength: 3,
+            delay: 500,
             source: function(request, response) {
                     $.getJSON("{{ app.request.baseUrl }}/suggestnouns", {
                         query: request.term,
@@ -133,6 +134,14 @@
                 }
                 $('#searchform').submit();
             },
+         });
+         $("#query").keypress(function(e){ 
+             if (!e) e = window.event;   
+             if (e.keyCode == '13') {
+                 $('#query').autocomplete('close');
+                 $('#searchform').submit();
+                 return false;
+             }
          });
     </script>
     

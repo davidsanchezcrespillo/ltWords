@@ -4,8 +4,6 @@
     <title>{{ title | trans }}</title>
     {% include 'headIncludes.twig' %}
 
-    <!-- jQuery UI -->
-    <script src="{{ app.request.baseUrl }}/vendor/jquery-ui/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="{{ app.request.baseUrl }}/vendor/jquery-ui/themes/cupertino/jquery-ui.min.css">
     
     <!-- Preventing too long lists of autocomplete results -->
@@ -115,6 +113,10 @@
     </div>
     {% include 'footer.twig' with {'conf': conf} %}
     </div>
+
+    {% include 'footIncludes.twig' %}
+    <!-- jQuery UI -->
+    <script src="{{ app.request.baseUrl }}/vendor/jquery-ui/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
         $("#query").autocomplete({

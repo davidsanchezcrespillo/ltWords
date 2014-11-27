@@ -1,6 +1,6 @@
 <p>
 {% for lang, data in images %}
-<a href="lang/{{ lang }}"><img src="{{ data }}" alt="{{ lang }}" /></a>
+<a href="lang/{{ lang }}"><img src="{{ app.request.baseUrl }}/img/{{ lang }}.png" alt="{{ lang }}" /></a>
 {% endfor %}
 </p>
 

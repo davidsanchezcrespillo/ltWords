@@ -1,8 +1,8 @@
 <nav>
 <ul id="mainNavbar" class="nav nav-pills" role="tablist">
   <li class="{% if name == 'LTWords' %}active{% endif %}"><a href="index"><img alt="Home" src="{{ app.request.baseUrl }}/img/home.png"></a></li>
-  <li class="{% if name == 'LTNumbers' %}active{% endif %}"><a href="numbers">{{ 'LTNumbers' | trans }}</a></li>
-  <li class="{% if name == 'LTNouns' %}active{% endif %}"><a href="nouns">{{ 'LTNouns' | trans }}</a></li>
+  <li class="{% if name == 'LTNumbers' %}active{% endif %}"><a href="numbers">{{ 'LTNumbersMenu' | trans }}</a></li>
+  <li class="{% if name == 'LTNouns' %}active{% endif %}"><a href="nouns">{{ 'LTNounsMenu' | trans }}</a></li>
 {% for lang, data in images %}
   <li class=""><a href="lang/{{ lang }}"><img src="{{ app.request.baseUrl }}/img/{{ lang }}.png" alt="{{ lang }}" /></a></li>
 {% endfor %}  

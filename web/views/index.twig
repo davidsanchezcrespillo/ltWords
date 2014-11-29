@@ -6,12 +6,22 @@
 
 </head>
 <body>
+    {% include 'facebookInit.twig' %}
     <div class="container">
     {% include 'navbar.twig' with {'name': title, 'images': conf.images} %}
     <div class="page-header"><h1>{{ title | trans }}</h1></div>
     <div class="row">
         <div class="col-md-12">
         <p>{{ introduction | trans }}</p>
+        <p>
+{{ 'madewith' | trans }} <a href="http://silex.sensiolabs.org/">Silex</a>, 
+<a href="http://getbootstrap.com/">Bootstrap</a>, 
+<a href="https://jquery.com/">jQuery</a>, 
+{{ 'datafrom' | trans }} <a href="https://launchpad.net/ispell-lt">Ispell-LT</a>.
+</p>
+<p>
+<a href="{{ conf.contactUrl }}" title="{{ 'Contact' | trans }}">{{ 'Contact' | trans }}</a>
+</p>
         </div>
     </div>
     {% include 'footer.twig' with {'conf': conf} %}

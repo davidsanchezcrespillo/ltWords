@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+    {% include 'facebookInit.twig' %}
     <div class="container">
         {% include 'navbar.twig' with {'name': title,'images': conf.images} %}
         <div class="page-header"><h1>{{ title | trans }}</h1></div>

@@ -6,11 +6,6 @@
   line-height: 64px;
 }
 
-/* This gets Google to fall into place */
-#social-share {
-  font-size: 1px;
-}
- 
 /* This gets Facebook to fall into place */
 #social-share iframe {
   vertical-align: middle;

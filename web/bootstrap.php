@@ -33,7 +33,7 @@ $app['translator'] = $app->share(
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.name' => 'ltWords',
     'monolog.logfile' => __DIR__.'/ltWords.log',
-    'monolog.level' => Monolog\Logger::DEBUG,
+    'monolog.level' => Monolog\Logger::WARNING,
 ));
 
 return $app;

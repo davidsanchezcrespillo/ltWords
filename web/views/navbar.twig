@@ -1,11 +1,22 @@
-<nav>
-<ul id="mainNavbar" class="nav nav-pills" role="tablist">
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul id="mainNavbar" class="nav nav-pills head-menu" role="tablist">
   <li class="{% if name == 'LTWords' %}active{% endif %}"><a href="index"><img alt="Home" src="{{ app.request.baseUrl }}/img/home.png"></a></li>
   <li class="{% if name == 'LTNumbers' %}active{% endif %}"><a href="numbers">{{ 'LTNumbersMenu' | trans }}</a></li>
   <li class="{% if name == 'LTNouns' %}active{% endif %}"><a href="nouns">{{ 'LTNounsMenu' | trans }}</a></li>
+  <li class="languages">
 {% for lang, data in images %}
-  <li class="">
     <a href="lang/{{ lang }}"><img src="{{ app.request.baseUrl }}/img/{{ lang }}.png" alt="{{ lang }}" /></a>
 {% endfor %}
+  </li>
 </ul>
+</div>
 </nav>

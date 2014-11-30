@@ -1,9 +1,13 @@
 #mainNavbar {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 #mainNavbar li {
-  line-height: 64px;
+  line-height: 48px;
+}
+
+#mainNavbar .languages a {
+  display: inline;
 }
 
 /* This gets Facebook to fall into place */

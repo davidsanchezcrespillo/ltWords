@@ -9,7 +9,10 @@ $app['debug'] = true;
 // Register the Twig service provider
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
-    'twig.options' => array('cache' => __DIR__.'/../cache'),
+    'twig.options' => array(
+        'cache' => __DIR__.'/../cache',
+        'auto_reload' => true
+    ),
 ));
 
 // Register the session service provider

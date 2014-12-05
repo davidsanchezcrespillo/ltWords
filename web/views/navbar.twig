@@ -1,4 +1,9 @@
 <nav class="navbar navbar-default" role="navigation">
+<p class="text-right">
+{% for lang, data in images %}
+    <a href="lang/{{ lang }}">{{ lang }}</a>&nbsp;
+{% endfor %}
+</p>
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -12,11 +17,6 @@
   <li class="{% if name == 'LTWords' %}active{% endif %}"><a href="index"><img alt="Home" src="{{ app.request.baseUrl }}/img/home.png"></a></li>
   <li class="{% if name == 'LTNumbers' %}active{% endif %}"><a href="numbers">{{ 'LTNumbersMenu' | trans }}</a></li>
   <li class="{% if name == 'LTNouns' %}active{% endif %}"><a href="nouns">{{ 'LTNounsMenu' | trans }}</a></li>
-  <li class="languages">
-{% for lang, data in images %}
-    <a href="lang/{{ lang }}"><img src="{{ app.request.baseUrl }}/img/{{ lang }}.png" alt="{{ lang }}" /></a>
-{% endfor %}
-  </li>
 </ul>
 </div>
 </nav>

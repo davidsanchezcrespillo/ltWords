@@ -15,12 +15,17 @@
     </div>   
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
             <form id="numberForm" method="get" action="{{ app.request.baseUrl }}/numbers">
-                <input type="number" min="0" id="searchString" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
+            <label for="searchString">{{ "Number" | trans }}</label>
+            <div class="input-group">
+                <input type="number" class="form-control" min="0" id="searchString" name="searchString" value="{{ name }}" />
+                <span class="input-group-btn"><input type="submit" class="btn btn-primary"value="{{ 'Search' | trans }}" /></span>
+            </div>
             </form>
             </div>
         </div>
+        
         <hr/>
         <div id="result" class="alert alert-success" style="display:none;">
         </div>

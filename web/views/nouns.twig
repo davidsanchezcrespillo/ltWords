@@ -26,9 +26,17 @@
       </div>
     </div>
     <div class="container">
+        <div class="row">
+        <div class="col-md-4">
         <form method="get" action="{{ app.request.baseUrl }}/nouns" id="searchform">
-            <input id="query" type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
+            <label for="searchString">{{ "Noun" | trans }}</label>
+            <div class="input-group">
+            <input id="query" class="form-control" type="text" name="searchString" value="{{ name }}" />
+            <span class="input-group-btn"><input type="submit" class="btn btn-primary" value="{{ 'Search' | trans }}" /></span>
+            </div>
         </form>
+        </div>
+        </div>
 {% if result.declensions == "" %}
     <p></p>
 {% else %}

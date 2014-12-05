@@ -1,13 +1,9 @@
 #mainNavbar {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
-#mainNavbar li {
-  line-height: 48px;
-}
-
-#mainNavbar .languages a {
-  display: inline;
+.jumbotron .container {
+  margin-top: 0;
 }
 
 /* This gets Facebook to fall into place */
@@ -20,7 +16,7 @@
 }
 
 .jumbotron {
-    margin-bottom: 0px;
+    padding-top: 10px;
     background-image: url(../img/kauno_rotuse.jpg);
     background-position: 0% 25%;
     background-size: cover;

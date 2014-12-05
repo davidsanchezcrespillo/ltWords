@@ -18,9 +18,14 @@
 </head>
 <body>
     {% include 'facebookInit.twig' %}
-    <div class="container">
+    <div class="jumbotron">
+      <div class="container">
         {% include 'navbar.twig' with {'name': title,'images': conf.images} %}
         <div class="page-header"><h1>{{ title | trans }}</h1></div>
+        <p>{{ 'introductionNouns' | trans }}</p>
+      </div>
+    </div>
+    <div class="container">
         <form method="get" action="{{ app.request.baseUrl }}/nouns" id="searchform">
             <input id="query" type="text" name="searchString" value="{{ name }}" /><input type="submit" value="{{ 'Search' | trans }}" />
         </form>

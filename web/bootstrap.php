@@ -16,7 +16,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 // Register the session service provider
-$app->register(new Silex\Provider\SessionServiceProvider());
+$app->register(new Silex\Provider\SessionServiceProvider(), array(
+    'cookie_lifetime' => 20000,
+));
 
 // Register the translation service provider
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(

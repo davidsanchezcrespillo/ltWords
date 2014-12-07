@@ -1,15 +1,15 @@
 LTWords: Lietuviški žodžiai
-LTNumbers: Numeriai
+LTNumbers: Skaitvardžiai
 LTNouns: Daiktavardžiai
-LTNumbersMenu: Numeriai
+LTNumbersMenu: Skaitvardžiai
 LTNounsMenu: Daiktavardžiai
 About: Apie mus
 Contact: Kontaktinė informacija
 Search: Ieškoti
 Singular: Vienaskaita
 Plural: Daugiskaita
-Case: ''
-Form: ''
+Case: Linksnis
+Form: Forma
 Kas?: 'Vardininkas (Kas?)'
 Ko?: 'Kilmininkas (Ko?)'
 Ką?: 'Galininkas (Ką?)'
@@ -17,13 +17,13 @@ Kam?: 'Naudininkas (Kam?)'
 Kame?: 'Vietininkas (Kame?)'
 Kuo?: 'Įnagininkas (Kuo?)'
 O!: 'Šauksmininkas (O!)'
-'Noun not found in the internal dictionary': Nerasta
-'Try somewhere else': Pabandykite kažkur kitur
-'You probably meant': Jūs tikriausiai reiškė
-Introduction: Aš rašiau šitą svetainę nes aš noriu išmokti Lietuvių kalbą. Gal bus naudinga kažkam!
+'Noun not found in the internal dictionary': Nerasta (vidiniam žodyne nerasta)
+'Try somewhere else': Pabandykite kur nors kitur
+'You probably meant': Jūs tikriausiai norėjote pasakyti
+Introduction: Aš sukūriau šitą svetainę nes noriu išmokti lietuviškai. Gal kam nors bus naudinga!
 madewith: Pagamintas su
 datafrom: naudoja duomenis iš
-introductionNouns: Įvesti daiktavardį
-introductionNumbers: Įvesti numerį
+introductionNouns: Įveskite daiktavardį, kad pamatytumėt jo linksniavimą
+introductionNumbers: Įveskite skaičių, kad pamatytumėt, kaip jis rašomas
 Noun: Daiktavardis
-Number: Numeris
+Number: Skaitvardis

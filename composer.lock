@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidsanchezcrespillo/LtNouns.git",
-                "reference": "1e7f48052cc2c4ff206630b34904cda948b45273"
+                "reference": "ebf4d44d620ab147958353a9bbea8f2f75dc0c5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/1e7f48052cc2c4ff206630b34904cda948b45273",
-                "reference": "1e7f48052cc2c4ff206630b34904cda948b45273",
+                "url": "https://api.github.com/repos/davidsanchezcrespillo/LtNouns/zipball/ebf4d44d620ab147958353a9bbea8f2f75dc0c5b",
+                "reference": "ebf4d44d620ab147958353a9bbea8f2f75dc0c5b",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             "keywords": [
                 "Lithuanian"
             ],
-            "time": "2014-11-27 09:11:08"
+            "time": "2014-12-08 20:09:57"
         },
         {
             "name": "lt-words/lt-numbers",
@@ -1799,16 +1799,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "1.5.5",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5d973e59cf58a0c847f298de84374c96b42b17b3"
+                "reference": "6f3e42d311b882b25b4d409d23a289f4d3b803d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5d973e59cf58a0c847f298de84374c96b42b17b3",
-                "reference": "5d973e59cf58a0c847f298de84374c96b42b17b3",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6f3e42d311b882b25b4d409d23a289f4d3b803d5",
+                "reference": "6f3e42d311b882b25b4d409d23a289f4d3b803d5",
                 "shasum": ""
             },
             "require": {
@@ -1870,7 +1870,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2014-09-25 03:33:46"
+            "time": "2014-12-04 22:32:15"
         }
     ],
     "aliases": [],

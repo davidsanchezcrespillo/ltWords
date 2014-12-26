@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title | trans }}</title>
+    {% include 'headIncludes.twig' %}
+</head>
+<body>
+    {% include 'facebookInit.twig' %}
+    
+    {% if (result != '') %}
+    <div id="previousResult" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="results" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div id="gameResult" class="alert">
+                <p><b>{{ result | trans }}</b></p>
+                <p>{{ rightReply }}</p>
+            </div>
+        </div>
+     </div>
+    </div>
+    {% endif %}
+
+    <div class="jumbotron">
+      <div class="container">
+        {% include 'navbar.twig' with {'name': title,'images': conf.images} %}
+        <div class="page-header"><h1>{{ title | trans }}</h1></div>
+        <p>{{ 'introductionGameNumbers' | trans }}</p>
+      </div>
+    </div>   
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1><span class="label label-primary">{{ questionNumber }}</span></h1>
+            </div>
+            <div class="col-xs-6">
+                <h2 class="text-right">
+                <span class="label label-primary">
+                {{ currentScore }} / {{ currentNumQuestions }}
+                </span>
+                </h2>
+            </div>
+        </div>
+        <div class="row topMargin">
+            <div class="col-md-12">
+            <form id="numberForm" method="get" action="{{ app.request.baseUrl }}/game-numbers">
+            <div class="input-group">
+                <input type="text" class="form-control" id="searchString" name="searchString" value="" />
+                <span class="input-group-btn"><input type="submit" class="btn btn-primary"value="OK" /></span>
+            </div>
+            <input type="hidden" name="questionNumber" value="{{ questionNumber }}" />
+            </form>
+            </div>
+        </div>
+        
+        <hr/>
+
+    {% include 'footer.twig' with {'conf': conf} %}
+    </div>
+    {% include 'footIncludes.twig' %}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      if ('{{ result }}' == 'OK') {
+          $('#gameResult').addClass('alert-success');
+      }
+      if ('{{ result }}' == 'NoOK') {
+          $('#gameResult').addClass('alert-danger');
+      }
+      $('#previousResult').modal('show');
+      setTimeout(function() {$('#previousResult').modal('hide');}, 4000);
+  });
+</script>
+
+</body>
+</html>

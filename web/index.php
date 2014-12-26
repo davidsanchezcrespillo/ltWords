@@ -69,6 +69,61 @@ $app->get('/numbers/{name}', function ($name) use ($app) {
 })
 ->value('name', '');
 
+// LT Numbers game page
+$app->get('/game-numbers', function () use ($app) {
+    $randomNumber = rand(0, 1000);
+
+    $name = $app['request']->get('searchString');
+    $number = $app['request']->get('questionNumber');
+    $nameLower = mb_strtolower($name, 'UTF-8');
+
+    $ltNumbers = new LtWords\LtNumbers\LtNumbers;
+    $rightReply = $ltNumbers->numberToText($number);
+
+    // Get the collated versions of both replies
+    $ltWordTypes = new LtWords\LtWordTypes\LtWordTypes;
+    $collatedRightReply = $ltWordTypes->collateWord($rightReply);
+    $collatedName = $ltWordTypes->collateWord($nameLower);
+
+    // Retrieve the session information
+    $currentNumQuestions = $app['session']->get('current_numquestions');
+    if ($currentNumQuestions === null) {
+        $currentNumQuestions = 0;
+    }
+    $currentScore = $app['session']->get('current_score');
+    if ($currentScore === null) {
+        $currentScore = 0;
+    }
+
+    // Check the reply against the right result
+    $result = '';
+    if ($name != '') {
+        $currentNumQuestions++;
+        if (($collatedRightReply == $collatedName) || ($rightReply == $nameLower)) {
+            $result = 'OK';
+            $currentScore++;
+        } else {
+            $result = 'NoOK';
+        }
+    }
+
+    // Update the number of questions and current score
+    $app['session']->set('current_numquestions', $currentNumQuestions);
+    $app['session']->set('current_score', $currentScore);
+
+    // Return the results
+    return $app['twig']->render('game-numbers.twig', array(
+        'title' => 'Game-LTNumbers',
+        'previousNumber' => $number,
+        'result' => $result,
+        'rightReply' => $rightReply,
+        'questionNumber' => $randomNumber,
+        'currentNumQuestions' => $currentNumQuestions,
+        'currentScore' => $currentScore,
+        'conf' => $app['conf'],
+    ));
+});
+
 // LT Nouns page
 $app->get('/nouns/{name}', function ($name) use ($app) {
     $parameter = $name;

@@ -27,3 +27,7 @@ introductionNouns: Introduzca un nombre (es posible el autocompletado) para ver 
 introductionNumbers: Introduzca un número para ver cómo se escribe
 Noun: Nombre
 Number: Número
+Game-LTNumbers: ¡Escriba el número!
+introductionGameNumbers: Escriba el número que ve y obtenga puntos
+OK: ¡Bravo!
+NoOK: No exactamente:

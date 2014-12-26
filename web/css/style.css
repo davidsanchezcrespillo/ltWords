@@ -33,3 +33,11 @@
 .jumbotron .page-header {
     margin-top: 10px;
 }
+
+.topMargin {
+    margin-top: 10px;
+}
+
+#gameResult {
+    margin-bottom: 0;
+}

@@ -27,3 +27,7 @@ introductionNouns: Enter a noun below (autocomplete is possible) to know its dec
 introductionNumbers: Enter a number below to know how to write it
 Noun: Noun
 Number: Number
+Game-LTNumbers: Write the number!
+introductionGameNumbers: Write the number below and get the highest score!
+OK: Great!
+NoOK: Not exactly:

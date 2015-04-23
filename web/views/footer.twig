@@ -1,20 +1,28 @@
 <hr/>
 <ul class="list-inline" id="social-share">
-        <li>
-            <div class="fb-share-button" data-layout="button"></div>
-        </li>
-        <li> 
-            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </li>
-        <li>
-            <div class="g-plusone" data-annotation="none"></div>
-        </li>
-        <li>
-            <a class="btn btn-link btn-default btn-sm" href="{{ conf.repoUrl }}">GitHub</a>
-        </li>
-        <li>
-            <a class="btn btn-link btn-default btn-sm" href="{{ conf.contactUrl }}" title="{{ 'Contact' | trans }}">{{ 'Contact' | trans }}</a>        
-        </li>
+
+  <li>
+    <a href="https://plus.google.com/share?url=http%3a%2f%2fsanchezcrespillo.info%2fdavid%2fltWords%2fweb%2findex">
+      <img src="{{ app.request.baseUrl }}/img/googleplus_32.png" alt="Share on Google+" />
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/intent/tweet?text=LtWords&url=http%3a%2f%2fsanchezcrespillo.info%2fdavid%2fltWords%2fweb%2findex">
+      <img src="{{ app.request.baseUrl }}/img/twitter_32.png" alt="Share on Twitter" />
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fsanchezcrespillo.info%2fdavid%2fltWords%2fweb%2findex">
+      <img src="{{ app.request.baseUrl }}/img/facebook_32.png" alt="Share on Facebook" />
+    </a>
+  </li>
+
+  <li>
+    <a class="btn btn-link btn-default btn-sm" href="{{ conf.repoUrl }}">GitHub</a>
+  </li>
+  <li>
+    <a class="btn btn-link btn-default btn-sm" href="{{ conf.contactUrl }}" title="{{ 'Contact' | trans }}">{{ 'Contact' | trans }}</a>        
+  </li>
+
 </ul>
 
